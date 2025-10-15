@@ -2,10 +2,14 @@ services:
   - type: static
     name: ebuka-portfolio
     env: static
-  repo: https://github.com/cfrancisx/my-portfolio
-  branch: main
-  buildCommand: echo "no build"
-  publishPath: .
+    repo: https://github.com/cfrancisx/my-portfolio
+    branch: main
+    buildCommand: echo "no build"
+    publishPath: .
+    routes:
+      - type: rewrite
+        source: "/*"
+        destination: "/index.html"
     envVars:
       - key: NODE_ENV
         value: production
