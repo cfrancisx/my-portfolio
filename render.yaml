@@ -4,7 +4,7 @@ services:
     env: static
     repo: https://github.com/cfrancisx/my-portfolio
     branch: main
-    buildCommand: npm ci && npm run build
+  buildCommand: npm ci --prefer-offline --no-audit && npm run build
     publishPath: dist
     routes:
       - type: rewrite
