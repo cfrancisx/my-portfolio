@@ -2,10 +2,10 @@ services:
   - type: static
     name: ebuka-portfolio
     env: static
-    repo: https://github.com/cfrancisx/ebuka-folio-studio-main
-    branch: main
-    buildCommand: npm ci && npm run build
-    publishPath: dist
+  repo: https://github.com/cfrancisx/my-portfolio
+  branch: main
+  buildCommand: echo "no build"
+  publishPath: .
     envVars:
       - key: NODE_ENV
         value: production
