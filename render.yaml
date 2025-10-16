@@ -4,7 +4,8 @@ services:
     env: static
     repo: https://github.com/cfrancisx/my-portfolio
     branch: main
-    buildCommand: npm ci --prefer-offline --no-audit && npm run build
+  # Force using npm by running the commands inside bash -lc so Render doesn't run them with Bun
+  buildCommand: bash -lc "npm ci --prefer-offline --no-audit && npm run build"
     publishPath: dist
     routes:
       - type: rewrite
